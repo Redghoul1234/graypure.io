@@ -1,0 +1,389 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Poppins;
+  background: linear-gradient(#ffdad5, #fff7f9);
+}
+.container{
+  padding: 10px 10%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav img{
+  width: 140px;
+}
+nav .fa-solid{
+  display: none;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: purple;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+.main{
+  overflow: hidden;
+}
+
+.contact-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-left-title h2{
+  font-weight: 600;
+  color: purple;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.contact-left-title hr{
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: purple;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-inputs{
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus{
+  border: 2px solid purple;
+}
+.contact-inputs::placeholder{
+  color: #a9a9a9;
+}
+.contact-left button{
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+.contact-right img{
+  width: 500px;
+
+}
+.contact-right img:hover{
+  transform: scale(1.05);
+}
+
+/*Susbcribe*/
+.subscribe{
+  padding: 2.5rem 0;
+}
+
+.subscribe-container{
+  background-color: hsl(228, 66%, 53%);;
+  padding: 3rem 2rem;
+  border-radius: 1.25rem;
+  border: 6px solid hsl(228, 62%, 59%);
+  text-align: center;
+}
+
+.subscribe-title{
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.subscribe-description{
+  color: hsl(228, 90%, 92%);
+  font-size: .813rem;
+  margin-bottom: 2rem;
+}
+
+.subscribe-button{
+  padding: 20px 40px;
+  border: 2px solid white;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  font-size: .813rem;
+  border-radius: 50px;
+}
+
+.subscribe-button:hover{
+  transform: scale(1.05);
+}
+
+/*Footer*/
+.footer-container{
+  row-gap: 2.5rem;
+}
+
+.footer-logo{
+  color: hsl(228, 66%, 53%);
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  margin-bottom: .75rem;
+}
+
+.footer-logo i{
+  font-size: 1.25rem;
+}
+
+.footer-description,
+.footer-link{
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.footer-content,
+.footer-links{
+  display: grid;
+}
+
+.footer-content{
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem 4rem;
+}
+
+.footer-title{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links{
+  row-gap: .5rem;
+}
+
+.footer-link{
+  color: hsl(228, 15%, 50%);
+  transition: .3s;
+}
+
+.footer-link:hover{
+  color: hsl(228, 57%, 28%);
+}
+
+.footer-social{
+  display: flex;
+  column-gap: 1rem;
+}
+
+.footer-social-link{
+  font-size: 1.25rem;
+  color: hsl(228, 15%, 50%);
+  transition: .3s;
+}
+
+.footer-social-link:hover{
+  color: hsl(228, 57%, 28%);
+}
+
+.footer-info,
+.footer-privacy{
+  display: flex;
+}
+
+.footer-info{
+  padding-bottom: 6rem;
+  margin-top: 5.5rem;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+
+.footer-copy,
+.footer-privacy a{
+  font-size:  .75rem;
+  font-weight: 400;
+  color: hsl(228, 15%, 50%);
+}
+
+.footer-privacy{
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+
+
+@media (max-width: 800px){
+  .contact-inputs{
+    width: 80vw;
+  }
+  .contact-right{
+    display: none;
+  }
+
+  nav .fa-solid{
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul{
+    background: linear-gradient(270deg, #ff994f, #fa6d86);;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}
+
+/*For small devices*/
+@media screen and (max-width: 350px){
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .section{
+    padding: 3.5rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .subscribe-container{
+    padding: 2rem 1rem;
+  }
+
+  .footer-content{
+    gap: 2.5rem;
+  }
+}
+
+/*For medium devices*/
+@media screen and (min-width: 576px){
+  .footer-content{
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width: 767px){
+  .subscribe-container{
+    padding: 3rem 13rem;
+  }
+
+  .footer-container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
+
+/*For large devices*/
+@media screen and (min-width: 1023px){
+  .section{
+    padding: 7.5rem 0 1rem;
+  }
+
+ .subscribe-container{
+  padding: 4rem 10rem 4.5rem;
+  border-radius: 2rem;
+  border: 12px solid  hsl(228, 62%, 59%);
+ }
+ .subscribe-title{
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+ }
+ .subscribe-description{
+  font-size: .938rem;
+  padding: 0 8rem;
+ }
+ .subscribe-button{
+  font-size: .938rem;
+ }
+
+ .footer-content{
+  grid-template-columns: repeat(4, max-content);
+ }
+ .footer-title{
+  margin-bottom: 1.5rem;
+ }
+ .footer-links{
+  row-gap: 1rem;
+ }
+ .footer-info{
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+ }
+
+ 
+}
+
+/*For 2k and 4k resolutions*/
+@media screen and (min-width: 2048px){
+  body{
+    zoom: 1.5;
+  }
+}
+
+@media screen and (min-width: 3840px){
+  body{
+    zoom: 2;
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/31471b5735.js" crossorigin="anonymous"></script>
+
+<!-- CSS link -->
+<link rel="stylesheet" href="booking.css">
+
+<!-- logo -->
+<link rel="icon" href="images/logo.png" type="image/x-icon">
+
+<!--Font type-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+  <title>Book a Consultation</title>
+</head>
+<body>
+
+  <!--Header-->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" alt="logo">
+        <ul id="sidemenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Book Consultation</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!--Form-->
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+        <h2>Get in touch</h2>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="ae6fe9a7-f443-41d2-97e6-a9409d6d11c2">
+      <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+      <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit">Book Now <i class="fa-solid fa-angle-right"></i></button>
+    </form>
+    <div class="contact-right">
+      <img src="EDITED-20240602T100459Z-001/EDITED/WILS PHOTOGRAPHYEKUMFINKWAKA_109.jpg" alt="">
+    </div>
+  </div>
+
+
+  <!--Subscribe-->
+<section class="subscribe-section">
+  <div class="subscribe-container container">
+    <h1 class="subscribe-title">
+      Find us on Google
+    </h1>
+    <p class="subscribe-description">
+      Subscribe and find super attractive price quotes from us, Find your residence soon
+    </p>
+    <a href="#" class="button subscribe-button">
+      Get Started
+    </a>
+  </div>
+</section>
+  </main>
+  
+
+
+  <!-- Footer -->
+<footer class="footer section">
+  <div class="footer-container container grid">
+    <div>
+      <a href="#" class="footer-logo">
+        Google <i class="fa-brands fa-google"></i>
+      </a>
+      <p class="footer-description">
+        Our vision is to make all people <br>
+        enjoy the houses the purchased.
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <div>
+        <h3 class="footer-title">
+          About
+        </h3>
+
+        <ul class="footer-links">
+          <li>
+            <a href="about.html" class="footer-link">About Us</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">Features</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">News & Blog</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">
+          Company
+        </h3>
+
+        <ul class="footer-links">
+          <li>
+            <a href="" class="footer-link">How We Work?</a>
+          </li>
+  
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">
+          Support
+        </h3>
+
+        <ul class="footer-links">
+          <li>
+            <a href="" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">
+          Follow Us
+        </h3>
+
+        <ul class="footer-social">
+         <a href="https://www.facebook.com/" target="_blank" class="footer-social-link">
+          <i class="fa-brands fa-facebook"></i>
+         </a>
+         <a href="https://www.twitter.com/" target="_blank" class="footer-social-link">
+          <i class="fa-brands fa-square-x-twitter"></i>
+         </a>
+         <a href="https://www.instagram.com/" target="_blank" class="footer-social-link">
+          <i class="fa-brands fa-instagram"></i>
+         </a>
+
+        </ul>
+      </div>
+
+    </div>
+  </div> 
+
+  <div class="footer-info container">
+    <span class="footer-copy">
+      &#169; Graypureharmony. All rights reserved
+    </span>
+
+    <div class="footer-privacy">
+      <a href="">Terms & Agreements</a>
+      <a href="">Privacy Policy</a>
+    </div>
+  </div>
+
+</footer>
+  
+<script src="booking.js"></script>
+
+<!--Scroll Reveal js link-->
+<script src="scrollreveal.min.js"></script>
+
+</body>
+</html>

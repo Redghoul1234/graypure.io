@@ -1,0 +1,301 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: linear-gradient( hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%));
+}
+
+.container{
+  padding: 10px 10%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav img{
+  width: 140px;
+}
+nav .fa-solid{
+  display: none;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: purple;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+h1{
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+h1::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: purple;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+h1:hover::after{
+  width: 100%;
+}
+
+.section{
+  padding: 4.5rem 0 2rem;
+}
+
+.img-gallery{
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.img-gallery img{
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-gallery img:hover{
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.full-img{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/*Footer*/
+.footer-container{
+  row-gap: 40px;
+  overflow: hidden;
+}
+
+.footer-logo{
+  color: hsl(228, 66%, 53%);
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  margin-bottom: 12px;
+}
+
+.footer-logo i{
+  font-size: 16px;
+}
+
+.footer-description,
+.footer-link{
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(228, 15%, 50%);
+}
+
+.footer-content,
+.footer-links{
+  display: grid;
+}
+
+.footer-content{
+  grid-template-columns: repeat(2, max-content);
+  gap: 40px 64px;
+}
+
+.footer-title{
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footer-links{
+  row-gap: 14px;
+}
+
+.footer-link{
+  color: hsl(228, 15%, 50%);
+  transition: .3s;
+}
+
+.footer-link:hover{
+  color: hsl(228, 57%, 28%);
+}
+
+.footer-social{
+  display: flex;
+  column-gap: 16px;
+}
+
+.footer-social-link{
+  font-size: 20px;
+  color: hsl(228, 15%, 50%);
+  transition: .3s;
+}
+
+.footer-social-link:hover{
+  color: hsl(228, 57%, 28%);
+}
+
+.footer-info,
+.footer-privacy{
+  display: flex;
+}
+
+.footer-info{
+  padding-bottom: 96px;
+  margin-top: 88px;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 24px;
+}
+
+.footer-copy,
+.footer-privacy a{
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(228, 15%, 50%);
+}
+
+.footer-privacy{
+  justify-content: center;
+  column-gap: 20px;
+}
+
+@media (max-width: 800px){
+  nav .fa-solid{
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul{
+    background: linear-gradient(270deg, #4ff3ff, #8264ee);;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}
+
+/*for smaller devices*/
+@media screen and (max-width: 350px){
+  .container{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .section{
+    padding: 56px 0 16px;
+  }
+  .img-gallery{
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+  h1{
+    position: absolute;
+    left: 20%;
+  }
+  .footer-container{
+    row-gap: 40px;
+  }
+  .footer-content{
+    grid-template-columns: repeat(2, max-content);
+    gap: 40px 64px;
+  }
+  .footer-description{
+    margin-bottom: 16px;
+  }
+}
+
+
+@media screen and (max-width: 558px) {
+  .footer-description{
+    margin-bottom: 16px;
+  }
+  
+}
+
+@media screen and (max-width: 1024px){
+  h1{
+    position: absolute;
+    left: 40%;
+  }
+}
